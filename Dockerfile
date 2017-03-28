@@ -3,6 +3,7 @@ MAINTAINER Novemberde "novemberde.github.io"
 
 RUN apt-get update && \
     apt-get --no-install-recommends install -q -y openjdk-7-jre-headless && \
+    apt-get install build-essentials && \
     rm -rf /var/lib/apt/lists/*
 ADD http://mirrors.jenkins-ci.org/war/2.20/jenkins.war /opt/jenkins.war
 
